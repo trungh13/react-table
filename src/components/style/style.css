@@ -102,17 +102,68 @@ header{
 	float:right;
 	color: #757575;
 }
-.btnCancel{
+.btnCancel,.btnSave{
 	color:#07f;
 }
-.btnSave{
+button:hover{
 	color:#fff;
 	background: #07f;
+}
+.btnSave{
 	margin-left:8px;
 }
 
-.errorMessage{
-	color:red;
+/*******************
+Validation popup box 
+*******************/
+
+/* Popup container*/
+.popup {
+    position: relative;
+    cursor: pointer;
+}
+
+/* The actual popup */
+.popup .popuptext {
+	width: 300px;
+	opacity: .7;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+	position: absolute;
+	top: -102px;
+    right: -33px;
+    z-index: 1;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 75%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Add animation (fade in the popup) */
+.popup{
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
 
 /*******************

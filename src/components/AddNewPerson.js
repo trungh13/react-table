@@ -12,9 +12,9 @@ export default class AddNewPerson extends Component {
     return (
         <div className="addNewPerson">
             <form onSubmit={this.handleCreate.bind(this)}>
-                <input  type="text"placeholder="Full name" ref="nameInput"></input>
-                <input  type="text"placeholder="Email address"ref="emailInput"></input>                
-                <input  type="tel"size="10" placeholder="Phone number" ref="phoneInput"></input>
+                <input  type="text"  placeholder="Full name" ref="nameInput"></input>
+                <input  type="text"  placeholder="Email address"ref="emailInput"></input>                
+                <input  type="text" placeholder="Phone number" ref="phoneInput"></input>
                 <button className="btnAddNew"type="submit">Add new</button>
                 {this.renderError()}
             </form>
@@ -25,7 +25,7 @@ export default class AddNewPerson extends Component {
 
 renderError(){
     if(!this.state.error){return null;}
-    return <div style={{ color: 'red' }}>{this.state.error}</div>;
+    return <div className="popup"><span className="popuptext" >{this.state.error}</span></div>;
     // return alert(this.state.error);
 }
 
